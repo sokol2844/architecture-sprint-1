@@ -19,6 +19,7 @@
 - cards-module - модуль управления карточками, их загрузкой и дальнейшей работой
 
 
+```
 /auth-microfrontend
   /src
     /components
@@ -34,4 +35,4 @@
   webpack.config.js
 /profile-microfrontend
   ... 
-
+```
