@@ -19,3 +19,19 @@
 - cards-module - модуль управления карточками, их загрузкой и дальнейшей работой
 
 
+/auth-microfrontend
+  /src
+    /components
+      Login.js               // Компонент входа пользователя
+      Register.js            // Компонент регистрации пользователя
+    /styles
+      login.css              // Стили для компонента входа
+      register.css           // Стили для компонента регистрации
+    /utils
+      auth.js                // Утилиты для аутентификации
+    index.js                 // Точка входа микрофронтенда
+  package.json               // Зависимости и скрипты микрофронтенда
+  webpack.config.js
+/profile-microfrontend
+  ... 
+
