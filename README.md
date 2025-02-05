@@ -19,20 +19,72 @@
 - cards-module - модуль управления карточками, их загрузкой и дальнейшей работой
 
 
+## Структура проекта
+
+
 ```
-/auth-microfrontend
+/auth-module
   /src
     /components
       Login.js               // Компонент входа пользователя
       Register.js            // Компонент регистрации пользователя
+      InfoTooltip.js         // Компонент вспомогательной информации
     /styles
       login.css              // Стили для компонента входа
       register.css           // Стили для компонента регистрации
+      tooltip.css            // Стили для компонента тултипа
     /utils
       auth.js                // Утилиты для аутентификации
     index.js                 // Точка входа микрофронтенда
   package.json               // Зависимости и скрипты микрофронтенда
-  webpack.config.js
-/profile-microfrontend
-  ... 
+  webpack.config.js          // Конфигурация модуля
+/profile-module
+  /src
+    /components
+      EditAvatarPopup.js     // Компонент окна обновления автара
+      EditProfilePopup.js    // Компонент окна обновления данных профиля
+      PopupWithForm.js       // Общий компонент модального окна
+      ProfileSection.js      // Компонент отображения профиля
+    /styles
+      profile-content.css    // Стили для компонента входа
+      popup.css              // Стили для модальных окон
+    /utils
+      api.js                 // Утилиты для получения и обновления данных пользователя
+    index.js                 // Точка входа микрофронтенда
+  package.json               // Зависимости и скрипты микрофронтенда
+  webpack.config.js          // Конфигурация модуля
+/cards-module
+  /src
+    /components
+      AddPlacePopup.js       // Компонент окна добавления новой карточки
+      AddPlaceButton.js      // Компонент кнопки добавления карточки
+      Card.js                // Компонент карточки
+      CardsList.js           // Компонент списка карточек
+      ImagePopup.js          // Компонент окна просмотра карточки
+    /styles
+      card.css               // Стили для компонента карточки и списка
+      add-popup.css          // Стили для модального окна добавления карточки
+      image-popup.css        // Стили для модального окна просмотра карточки
+      add-button.css         // Стили для кнопки добавления карточки
+    /utils
+      api.js                 // Утилиты для получения и обновления карточек
+    index.js                 // Точка входа микрофронтенда
+  package.json               // Зависимости и скрипты микрофронтенда
+  webpack.config.js          // Конфигурация микрофронтенда
+/host
+  /src
+    /components
+      Footer.js              // Компонент футера
+      Header.js              // Компонент заголовка
+      ProtectedRoute.js      // Компонент защищенного рута
+      App.js                 // Компонент основного приложения
+    /styles
+      footer.css             // Стили для компонента футера
+      header.css             // Стили для модального заголовка
+      page.css               // Стили для общей страницы
+    /contexts
+      CurrentUserContext.js  // Контекст для хранения данных глобальных пользователя
+    index.js                 // Точка входа микрофронтенда
+  package.json               // Зависимости и скрипты микрофронтенда
+  webpack.config.js          // Конфигурация хоста
 ```
